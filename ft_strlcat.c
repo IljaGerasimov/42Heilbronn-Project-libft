@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 02:46:08 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 04:10:29 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/10/27 05:10:22 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	s = src;
 	d = dst;
 	i = 0;
-	if (n == 0)
-	{
-		while (*s)
-			s++;
-		return (s - src);
-	}
-	if (n > 0)
-	{
-		while (*d)
-			d++;
-		while (*s)
-			s++;
-	}
-	while (src[i] != '\0' && (((d - dst + i) < n - 1)))
+	while (*d)
+		d++;
+	while (*s)
+		s++;
+	if ((d - dst) >= n)
+		return ((d - dst) + (s - src));
+	while (src[i] && (((d - dst + i) < n - 1)))
 	{
 		d[i] = src[i];
 		i++;

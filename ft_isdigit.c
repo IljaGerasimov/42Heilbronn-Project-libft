@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 06:30:42 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/15 06:37:26 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/10/27 07:04:08 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,3 @@ int	ft_isdigit(int a)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = '1';
-// 	if (isdigit(c))
-// 	{
-// 		printf("%d\n", c);
-// 	}
-// 	if (ft_isdigit(c))
-// 	{
-// 		printf("%d\n", c);
-// 	}
-// }

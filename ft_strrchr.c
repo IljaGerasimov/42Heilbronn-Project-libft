@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 05:04:53 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 07:04:12 by igerasim         ###   ########.fr       */
+/*   Created: 2025/10/27 08:05:34 by igerasim          #+#    #+#             */
+/*   Updated: 2025/10/27 09:12:06 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include <stddef.h>
 
-int	ft_isalpha(int a)
+char	*ft_strrchr(const char *s, int c)
 {
-	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
+	unsigned char	ch;
+	size_t			i;
+
+	ch = (unsigned char)c;
+	i = 0;
+	while (s[i])
+		i++;
+	while ((unsigned char)s[i] != ch)
 	{
-		return (a);
+		if (i == 0)
+			return (NULL);
+		i--;
 	}
-	return (0);
+	return ((char *)&s[i]);
 }

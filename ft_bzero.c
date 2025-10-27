@@ -6,30 +6,18 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 20:32:43 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/16 21:07:55 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/10/27 06:25:21 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*t;
 
-	t = s;
-	while (n > 0)
-	{
-		*t = '\0';
-		s++;
-		n--;
-	}
+	t = (unsigned char *)s;
+	while (n--)
+		*t++ = '\0';
 }
 
-// int	main(void)
-// {
-// 	char s[] = "1234";
-
-// 	ft_bzero(s, 2);
-// 	printf("%s", s);
-// 	return (0);
-// }
