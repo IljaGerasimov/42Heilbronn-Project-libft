@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 10:34:46 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/28 08:20:27 by igerasim         ###   ########.fr       */
+/*   Created: 2025/10/28 09:48:38 by igerasim          #+#    #+#             */
+/*   Updated: 2025/10/28 11:44:44 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	const unsigned char	*st;
-	size_t				i;
+	int	dec;
+	int	negative;
 
-	st = (const unsigned char *)s;
-	i = 0;
-	while (i < n)
+	while (*nptr >= 9 && *nptr <= 13)
+		nptr++;
+	negative = 1;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if (st[i] == (unsigned char)c)
-			return ((void *)&st[i]);
-		i++;
+		if (*nptr == '-')
+			negative = -1;
+		nptr++;
 	}
-	return (NULL);
+	dec = 0;
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		dec = (dec * 10) + (*nptr - '0');
+		nptr++;
+	}
+	return (dec * negative);
 }
