@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 20:32:43 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 06:25:21 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/10/29 07:49:24 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*t;
-
-	t = (unsigned char *)s;
 	while (n--)
-		*t++ = '\0';
+		*(unsigned char *)s++ = 0;
 }
-

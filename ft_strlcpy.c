@@ -6,11 +6,11 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 01:00:20 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 02:25:50 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/10/29 08:18:48 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {

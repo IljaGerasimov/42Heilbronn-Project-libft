@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 17:06:54 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/29 08:18:40 by igerasim         ###   ########.fr       */
+/*   Created: 2025/10/29 03:44:58 by igerasim          #+#    #+#             */
+/*   Updated: 2025/10/29 08:27:15 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdint.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*st;
+	void	*ptr;
+	char	*tmp;
+	size_t	total_size;
 
-	st = (unsigned char *)s;
-	while (n--)
-		*st++ = (unsigned char)c;
-	return (s);
+	if (size > 0 && nmemb > (SIZE_MAX / size))
+		return (NULL);
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
+	if (ptr == NULL)
+		return (NULL);
+	tmp = (char *)ptr;
+	while (total_size--)
+		*tmp++ = 0;
+	return (ptr);
 }
