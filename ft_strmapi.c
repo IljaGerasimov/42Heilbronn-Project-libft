@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 08:05:34 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/30 20:54:25 by igerasim         ###   ########.fr       */
+/*   Created: 2025/11/04 18:38:18 by igerasim          #+#    #+#             */
+/*   Updated: 2025/11/05 01:50:24 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char	last_c;
-	size_t			s_len;
+	char			*s_new;
+	unsigned int	i;
 
-	last_c = (unsigned char)c;
-	s_len = ft_strlen(s);
-	if (last_c == '\0')
-		return ((char *)&s[s_len]);
-	while (s_len > 0)
+	if (!s || !f)
+		return (NULL);
+	s_new = (char *)malloc(ft_strlen(s) + 1);
+	if (!s_new)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		s_len--;
-		if ((unsigned char)s[s_len] == last_c)
-			return ((char *)&s[s_len]);
+		s_new[i] = f(i, s[i]);
+		i++;
 	}
-	return (NULL);
+	s_new[i] = '\0';
+	return (s_new);
 }

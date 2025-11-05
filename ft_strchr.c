@@ -6,11 +6,11 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 07:24:29 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 08:05:08 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/02 17:11:46 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

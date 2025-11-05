@@ -6,11 +6,11 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 05:17:17 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 06:54:08 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:20:14 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

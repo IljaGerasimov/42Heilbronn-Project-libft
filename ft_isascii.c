@@ -6,13 +6,15 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:32:18 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/16 13:43:16 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 03:10:18 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int a)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	if (a >= 0 && a <= 127)
-		return (a);
+	if (c >= 0 && c <= 127)
+		return (1);
 	return (0);
 }

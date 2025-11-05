@@ -6,13 +6,15 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 13:29:17 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/16 13:54:00 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 03:10:36 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int a)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-	if (a >= 32 && a <= 126)
-		return (a);
+	if (c >= 32 && c <= 126)
+		return (c);
 	return (0);
 }

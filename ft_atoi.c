@@ -6,9 +6,11 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 09:48:38 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/29 03:32:14 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 03:05:49 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

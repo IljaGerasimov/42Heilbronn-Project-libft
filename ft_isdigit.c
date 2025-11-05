@@ -6,18 +6,15 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 06:30:42 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 07:04:08 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 03:10:28 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
 
-int	ft_isdigit(int a)
+int	ft_isdigit(int c)
 {
-	if (a >= '0' && a <= '9')
-	{
-		return (a);
-	}
+	if (c >= '0' && c <= '9')
+		return (c);
 	return (0);
 }

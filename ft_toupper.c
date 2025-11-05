@@ -6,9 +6,11 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 07:05:30 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 09:13:35 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 03:18:14 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

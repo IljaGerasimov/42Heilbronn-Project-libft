@@ -6,11 +6,11 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 20:32:43 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/29 07:49:24 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 03:08:53 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 08:05:34 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/30 20:54:25 by igerasim         ###   ########.fr       */
+/*   Created: 2025/10/29 08:32:29 by igerasim          #+#    #+#             */
+/*   Updated: 2025/11/04 19:16:51 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s)
 {
-	unsigned char	last_c;
-	size_t			s_len;
+	char		*str1;
+	size_t		i;
+	size_t		len;
 
-	last_c = (unsigned char)c;
-	s_len = ft_strlen(s);
-	if (last_c == '\0')
-		return ((char *)&s[s_len]);
-	while (s_len > 0)
+	len = ft_strlen(s);
+	str1 = (char *)malloc(len + 1);
+	if (!str1)
+		return (NULL);
+	i = 0;
+	while (i <= len)
 	{
-		s_len--;
-		if ((unsigned char)s[s_len] == last_c)
-			return ((char *)&s[s_len]);
-	}
-	return (NULL);
+		str1[i] = s[i];
+		i++;
+	}	
+	return (str1);
 }

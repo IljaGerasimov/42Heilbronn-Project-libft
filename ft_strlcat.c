@@ -6,32 +6,30 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 02:46:08 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/27 05:10:22 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/04 23:20:13 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	const char	*s;
-	char		*d;
-	size_t		i;
+	size_t	s_len;
+	size_t	d_len;
+	size_t	i;
 
-	s = src;
-	d = dst;
+	s_len = ft_strlen(src);
+	d_len = 0;
+	while ((d_len < size) && dst[d_len])
+		d_len++;
 	i = 0;
-	while (*d)
-		d++;
-	while (*s)
-		s++;
-	if ((d - dst) >= n)
-		return ((d - dst) + (s - src));
-	while (src[i] && (((d - dst + i) < n - 1)))
+	if (d_len >= size)
+		return (s_len + size);
+	while (src[i] && (((d_len + i) < size - 1)))
 	{
-		d[i] = src[i];
+		dst[d_len + i] = src[i];
 		i++;
 	}
-	d[i] = '\0';
-	return ((d - dst) + (s - src));
+	dst[d_len + i] = '\0';
+	return (d_len + s_len);
 }

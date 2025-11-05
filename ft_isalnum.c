@@ -6,16 +6,16 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:18:16 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/16 12:27:19 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 03:05:13 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int a)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	if ((a >= '0' && a <= '9') || (a >= 'A' && a <= 'Z')
-		|| (a >= 'a' && a <= 'z'))
-	{
-		return (a);
-	}
+	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z'))
+		return (1);
 	return (0);
 }
