@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 09:14:38 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/30 16:19:47 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/07 04:18:54 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	while (i < n)
 	{
-		if (sc1[i] != sc2[i] || !sc1[i])
+		if ((sc1[i] != sc2[i]) || !sc1[i])
 			return ((int)(sc1[i] - sc2[i]));
 		i++;
 	}

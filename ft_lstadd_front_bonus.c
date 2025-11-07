@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 03:04:21 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/05 20:53:54 by igerasim         ###   ########.fr       */
+/*   Created: 2025/11/06 02:30:38 by igerasim          #+#    #+#             */
+/*   Updated: 2025/11/07 04:17:35 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	if (lst && new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

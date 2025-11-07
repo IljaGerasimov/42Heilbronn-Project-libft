@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 03:04:21 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/05 20:53:54 by igerasim         ###   ########.fr       */
+/*   Created: 2025/11/05 05:32:48 by igerasim          #+#    #+#             */
+/*   Updated: 2025/11/05 20:55:35 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	write(fd, s, (ft_strlen(s)));
+	write(fd, "\n", 1);
 }

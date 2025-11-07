@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:45:18 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/02 14:25:14 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 05:49:28 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joined_s;
-	size_t	i;
-	size_t	j;
+	size_t	s1_len;
+	size_t	s2_len;
 	size_t	total;
-	size_t	counter;
+	size_t	i;
 
-	i = ft_strlen(s1);
-	j = ft_strlen(s2);
-	if (i > (SIZE_MAX - j))
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	if (s1_len > (SIZE_MAX - s2_len))
 		return (NULL);
-	total = i + j;
+	total = s1_len + s2_len;
 	joined_s = malloc((total + 1) * (sizeof(char)));
 	if (!joined_s)
 		return (NULL);
-	counter = 0;
-	while (counter < i)
-		joined_s[counter++] = *s1++;
-	while (i < total)
-		joined_s[i++] = *s2++;
+	i = 0;
+	while (i < s1_len)
+		joined_s[i++] = *s1++;
+	while (s1_len < total)
+		joined_s[s1_len++] = *s2++;
 	joined_s[total] = '\0';
 	return (joined_s);
 }

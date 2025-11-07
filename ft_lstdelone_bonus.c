@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 03:04:21 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/05 20:53:54 by igerasim         ###   ########.fr       */
+/*   Created: 2025/11/07 04:12:17 by igerasim          #+#    #+#             */
+/*   Updated: 2025/11/07 04:41:12 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	write(fd, &c, 1);
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

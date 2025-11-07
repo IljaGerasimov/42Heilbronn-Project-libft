@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 22:00:54 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/04 17:19:18 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 06:11:39 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,19 +61,3 @@ char	*ft_itoa(int n)
 	}
 	return (chr);
 }
-
-// #include <limits.h>
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*str;
-// 	int		n;
-
-// 	n = 333333;
-// 	if (!(str = ft_itoa(n)))
-// 		printf("Error");
-// 	else
-// 		printf("%s\n", str);
-// 	free(str);
-// }
