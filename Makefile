@@ -6,7 +6,7 @@
 #    By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/30 16:14:54 by igerasim          #+#    #+#              #
-#    Updated: 2025/11/08 03:24:28 by igerasim         ###   ########.fr        #
+#    Updated: 2025/11/13 05:17:34 by igerasim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,14 +67,13 @@ SRCS_BONUS = ft_lstnew_bonus.c\
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
-all: $(NAME)
-
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $^
 
-bonus: $(OBJS) $(OBJS_BONUS)
-	ar rc $(NAME) $^
-	ranlib $(NAME)
+all: $(OBJS) $(OBJS_BONUS)
+	ar -rcs $(NAME) $^
+
+bonus: all
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
