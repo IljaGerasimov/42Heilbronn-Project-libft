@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 08:32:29 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/04 19:16:51 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/13 01:03:41 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_strdup(const char *s)
 	{
 		str1[i] = s[i];
 		i++;
-	}	
+	}
 	return (str1);
 }
