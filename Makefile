@@ -6,7 +6,7 @@
 #    By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/30 16:14:54 by igerasim          #+#    #+#              #
-#    Updated: 2025/11/13 23:44:10 by igerasim         ###   ########.fr        #
+#    Updated: 2025/11/14 03:06:06 by igerasim         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -53,6 +53,7 @@ SRCS = ft_atoi.c\
 	   ft_putnbr_fd.c\
 	   ft_putstr_fd.c\
 	   ft_putendl_fd.c
+
 
 SRCS_BONUS = ft_lstnew_bonus.c\
 			 ft_lstlast_bonus.c\
