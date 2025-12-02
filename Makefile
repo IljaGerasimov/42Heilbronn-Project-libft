@@ -6,7 +6,7 @@
 #    By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/30 16:14:54 by igerasim          #+#    #+#              #
-#    Updated: 2025/11/16 20:58:40 by igerasim         ###   ########.fr        #
+#    Updated: 2025/12/02 10:37:56 by igerasim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,21 +68,21 @@ OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 $(NAME): $(OBJS)
-	ar -rcs $(NAME) $^
+	@ar -rcs $(NAME) $^
 
 all: $(OBJS) $(OBJS_BONUS)
-	ar -rcs $(NAME) $^
+	@ar -rcs $(NAME) $^
 
 bonus: all
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	@rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

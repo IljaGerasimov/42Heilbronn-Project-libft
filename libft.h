@@ -6,12 +6,13 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:22:38 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/16 20:58:32 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/16 20:55:58 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stdarg.h>
 # include <stddef.h>
 # include <stdint.h>
 # include <stdlib.h>

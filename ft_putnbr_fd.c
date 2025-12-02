@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 06:06:38 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/16 20:59:38 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/05 20:47:39 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (long_n == 0)
 		return (ft_putchar_fd('0', fd));
 	if (long_n < 0)
-	{
+	{	
 		ft_putchar_fd('-', fd);
 		long_n *= -1;
 	}

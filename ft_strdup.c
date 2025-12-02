@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 08:32:29 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/16 20:59:26 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/13 01:03:41 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*str1;
-	size_t	i;
-	size_t	len;
+	char		*str1;
+	size_t		i;
+	size_t		len;
 
 	len = ft_strlen(s);
 	str1 = (char *)malloc(len + 1);

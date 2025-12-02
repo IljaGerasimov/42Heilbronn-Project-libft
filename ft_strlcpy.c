@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 01:00:20 by igerasim          #+#    #+#             */
-/*   Updated: 2025/11/16 20:59:08 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/11/04 22:50:44 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	s_len;
-	size_t	i;
+	size_t		s_len;
+	size_t		i;
 
 	s_len = ft_strlen(src);
 	if (size == 0)
