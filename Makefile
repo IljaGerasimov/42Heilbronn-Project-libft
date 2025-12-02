@@ -6,7 +6,7 @@
 #    By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/30 16:14:54 by igerasim          #+#    #+#              #
-#    Updated: 2025/12/02 10:37:56 by igerasim         ###   ########.fr        #
+#    Updated: 2025/12/02 13:15:41 by igerasim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 $(NAME): $(OBJS)
 	@ar -rcs $(NAME) $^
+	@echo "libft.a successfully compiled! 🤑"
 
 all: $(OBJS) $(OBJS_BONUS)
 	@ar -rcs $(NAME) $^
@@ -80,10 +81,11 @@ bonus: all
 
 clean:
 	@rm -f $(OBJS) $(OBJS_BONUS)
-
-fclean: clean
-	@rm -f $(NAME)
+	@echo "Cleaned objects 🧹⚙️"
+fclean:
+	@rm -f $(NAME) $(OBJS) $(OBJS_BONUS)
+	@echo "Cleaned library 🧹📚"
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all bonus clean fclean re
