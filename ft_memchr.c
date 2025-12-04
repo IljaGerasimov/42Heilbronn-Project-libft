@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 10:34:46 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/30 18:54:15 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/12/04 21:16:31 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*st;
-	size_t				i;
+	unsigned char	*str;
+	size_t			i;
 
-	st = (const unsigned char *)s;
+	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if (st[i] == (unsigned char)c)
-			return ((void *)&st[i]);
+		if (str[i] == (unsigned char)c)
+			return ((void *)&str[i]);
 		i++;
 	}
 	return (NULL);

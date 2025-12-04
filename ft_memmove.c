@@ -6,7 +6,7 @@
 /*   By: igerasim <igerasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 05:17:17 by igerasim          #+#    #+#             */
-/*   Updated: 2025/10/30 16:20:14 by igerasim         ###   ########.fr       */
+/*   Updated: 2025/12/04 21:13:03 by igerasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,23 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	size_t	i;
 
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (d < s)
+	if (!dest && !src)
+		return (NULL);
+	if (dest < src)
 	{
-		while (n--)
-			*d++ = *s++;
+		i = 0;
+		while (i < n)
+		{
+			(((unsigned char *)dest)[i] = ((const unsigned char *)src)[i]);
+			i++;
+		}
 	}
-	else if (d > s)
+	else if (dest > src)
 	{
-		d += (n - 1);
-		s += (n - 1);
 		while (n--)
-			*d-- = *s--;
+			((unsigned char *)dest)[n] = ((const unsigned char *)src)[n];
 	}
 	return (dest);
 }
